@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node src/server.ts",
     "test": "jest",
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "lint": "npx eslint . --ext .ts"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
