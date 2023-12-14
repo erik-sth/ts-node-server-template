@@ -1,23 +1,14 @@
 {
   "name": "ts-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template Repository",
   "main": "src/server.ts",
   "scripts": {
+    "dev": "ts-node src/server.ts",
     "test": "jest",
     "build": "tsc -p ."
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
-  "dependencies": {
+   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
