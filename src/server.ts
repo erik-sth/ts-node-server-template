@@ -4,6 +4,7 @@ import isOnline from './routes/base';
 import addRateLimiter from './startup/limitRate';
 import * as dotenv from 'dotenv';
 import logger from './utils/logger';
+import connectToDatabase from './startup/db';
 dotenv.config();
 
 const app: Express = express();
@@ -11,6 +12,7 @@ const app: Express = express();
 // startup
 configureCors(app);
 addRateLimiter(app);
+connectToDatabase();
 
 app.use(express.json());
 app.use('/', isOnline);
