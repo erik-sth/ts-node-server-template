@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { startDb, stopDB } from '../startMemoryDb';
+import { startDb, stopDB } from '../fakeDb';
 
 jest.mock('mongoose');
 

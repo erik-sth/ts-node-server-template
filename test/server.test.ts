@@ -1,6 +1,6 @@
 import supertest, { SuperTest, Test } from 'supertest';
 import { server } from '../src/server';
-import { startDb, stopDB } from './startMemoryDb';
+import { startDb, stopDB } from './fakeDb';
 
 describe('Server Tests', () => {
     let app: SuperTest<Test>;
