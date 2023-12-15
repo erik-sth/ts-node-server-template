@@ -1,12 +1,13 @@
 import mongoose from 'mongoose';
-import connectToDatabase from '../src/startup/db';
+import { startDb, stopDB } from '../startMemoryDb';
 
 jest.mock('mongoose');
 
 describe('Database Connection', () => {
     it('should connect to the database', async () => {
         const mockConnect = jest.spyOn(mongoose, 'connect');
-        await connectToDatabase();
+        await startDb();
         expect(mockConnect).toHaveBeenCalledWith(expect.any(String));
+        stopDB();
     });
 });
