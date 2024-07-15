@@ -6,7 +6,11 @@
         "target": "ES6",
         "sourceMap": true,
         "outDir": "dist",
-        "baseUrl": "*"
+        "baseUrl": ".",
+        "forceConsistentCasingInFileNames": true,
+        "paths": {
+            "@types": ["types"]
+        }
     },
-    "include": ["**/**/*", "*", "jest.config.ts"]
+    "include": ["**/**/*", "*", "jest.config.ts", "types/**/*"]
 }
